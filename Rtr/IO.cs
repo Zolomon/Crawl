@@ -29,13 +29,13 @@ namespace Lampa
                 if (shouldColor)
                 {
                     Console.ForegroundColor =
-                        (ConsoleColor) int.Parse(fchar.ToString(), System.Globalization.NumberStyles.HexNumber);
+                        (ConsoleColor)int.Parse(fchar.ToString(), System.Globalization.NumberStyles.HexNumber);
                     Console.BackgroundColor =
-                        (ConsoleColor) int.Parse(bchar.ToString(), System.Globalization.NumberStyles.HexNumber);
+                        (ConsoleColor)int.Parse(bchar.ToString(), System.Globalization.NumberStyles.HexNumber);
                 }
 
                 if (i < text.Length)
-                        Console.Write(text[i]);
+                    Console.Write(text[i]);
             }
         }
     }

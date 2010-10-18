@@ -46,9 +46,7 @@ namespace Lampa.States
 
             if (MenuItemList.ContainsKey(key.Key.ToString().ToUpper()))
                 while (!items[SelectedItemIndex].Equals(key.Key.ToString()))
-                {
                     SelectedItemIndex++;
-                }
             
             if (key.Key == ConsoleKey.UpArrow || key.Key == ConsoleKey.LeftArrow)
                 SelectedItemIndex--;
@@ -97,8 +95,6 @@ namespace Lampa.States
                 {
                     Console.WriteLine("You pressed enter. Now we should go to the selected State.");
                     Console.Write("The selected state was: "); 
-                    IO.Print(selectedItem.Text, ConsoleColor.White, ConsoleColor.Blue);
-
                 }
             }
         }
