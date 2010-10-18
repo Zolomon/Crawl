@@ -6,8 +6,6 @@ namespace Lampa
     {
         public static void Print(string text)
         {
-            ConsoleColor fc = ConsoleColor.Gray;
-            ConsoleColor bc = ConsoleColor.Black;
             char fchar = '0';
             char bchar = '0';
             bool shouldColor = false;
@@ -25,28 +23,20 @@ namespace Lampa
                 {
                     shouldColor = false;
                     i++;
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.BackgroundColor = ConsoleColor.Black;
                 }
                 if (shouldColor)
-                    Print(text[i].ToString(), (ConsoleColor)int.Parse(fchar.ToString(), System.Globalization.NumberStyles.HexNumber),
-                                              (ConsoleColor)int.Parse(bchar.ToString(), System.Globalization.NumberStyles.HexNumber));
-                else
-                    if (i < text.Length)
+                {
+                    Console.ForegroundColor =
+                        (ConsoleColor) int.Parse(fchar.ToString(), System.Globalization.NumberStyles.HexNumber);
+                    Console.BackgroundColor =
+                        (ConsoleColor) int.Parse(bchar.ToString(), System.Globalization.NumberStyles.HexNumber);
+                }
+
+                if (i < text.Length)
                         Console.Write(text[i]);
             }
-        }
-
-        public static void Print(string text, ConsoleColor color)
-        {
-            Print(text, color, ConsoleColor.Black);
-        }
-
-        public static void Print(string text, ConsoleColor foregroundColor, ConsoleColor backgroundColor)
-        {
-            Console.ForegroundColor = foregroundColor;
-            Console.BackgroundColor = backgroundColor;
-            Console.Write(text);
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
 }
