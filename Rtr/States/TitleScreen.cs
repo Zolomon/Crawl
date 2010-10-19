@@ -109,6 +109,16 @@ namespace Lampa.States
 
         private void RenderMenu(MenuItem selectedMenuItem)
         {
+            IO.Print(
+"\n\n" +
+"               #F3.,-:::::| #A2:::::::..|    #C5:::.|  #84.::|    #84.|   #84.:::|#0F:::|     \n" +
+"             #F3,;;;'````'| #A2;;;;``;;;;|   #C5;;`;;| #84';;,|  #84;;|  #84;;;'| #0F;;;|     \n" +
+"             #F3[[[|         #A2[[[,/[[['|  #C5,[[| |#C5'[[,|#84'[[,| #84[[,| #84[['|  #0F[[[|     \n" +
+"             #F3$$$|         #A2$$$$$$c|   #C5c$$$cc$$$c| #84Y$c$$$c$P|   #0F$$'|     \n" +
+"             #F3`88bo,__,o,| #A2888b| #A2\"88bo,|#C5888|   #C5888,| #84\"88\"888|   #0Fo88oo,.__|\n" +
+"               #F3\"YUMMMMMP\"|#A2MMMM|   #A2\"W\"| #C5YMM|   #C5\"\"`|   #84\"M \"M\"|   #0F\"\"\"\"YUMMM|\n" +
+"                                             «By Zolomon, 2010»\n\n");
+
             IO.Print("Menu: \n");
 
             foreach (KeyValuePair<string, MenuItem> kvp in MenuItemList)
