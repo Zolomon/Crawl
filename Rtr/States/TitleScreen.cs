@@ -93,8 +93,8 @@ namespace Lampa.States
                     IO.Print(String.Format("You selected item: {0}", selectedItem.Text));
                 else if (key.Key == ConsoleKey.Enter && selectedItem != null)
                 {
-                    Console.WriteLine("You pressed enter. Now we should go to the selected State.");
-                    Console.Write("The selected state was: "); 
+                    IO.Print("You pressed enter. Now we should go to the selected State.\n");
+                    IO.Print("The selected state was: "); 
                 }
             }
         }
@@ -109,8 +109,7 @@ namespace Lampa.States
 
         private void RenderMenu(MenuItem selectedMenuItem)
         {
-            ConsoleColor color = ConsoleColor.Gray;
-            Console.WriteLine("Menu: ");
+            IO.Print("Menu: \n");
 
             foreach (KeyValuePair<string, MenuItem> kvp in MenuItemList)
             {

@@ -17,7 +17,6 @@ namespace Lampa
             mainStateMachine = new StateMachine(true);
             mainStateMachine.AddState(new States.TitleScreen());
 
-            Console.WriteLine("Welcome to RPG!");
             //player = new Actor();
             //MapReader mr = new MapReader();
             //Map map = mr.Read("resources/map_0_0.bmp");
